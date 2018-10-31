@@ -29,10 +29,40 @@
     </nav>
   </header>
   <main>
-  <h1>Contact Amy With Any Questions</h1>
-  <h2>Insert Future Contact Me Form Here</h2>
+  <form action="https://formspree.io/gougha1989@gmail.com" method="POST" data-validate>
+    <div>
+      <label for="name">Your Name
+        <input id="name" type="text" name="usersname" class="form-input">
+      </label>
+    </div>
+
+    <div>
+      <label for="email">Your Email
+        <input id="email" type="email" name="replyhere" class="form-input" required>
+      </label>
+    </div>
+
+    <div>
+      <label for="message">Your Message
+        <textarea id="message" name="usermessage" class="form-input" required>
+        </textarea>
+      </label>
+    </div>
+
+      <div>
+        <button type="submit">Submit Your Message</button>
+      </div>
+
+    <input type="hidden" name="thankyou" value="https://inf7420.github.io/gough-project/thanks.html"/>
+    <input type="hidden" name="_subject" value="response from project form"/>
+    <input type="text" name="receivedsubmission" style="display:none"/>
+  </form>
   <img src="images/honduras-coast.jpg" alt="Beautiful picture of the Honduras coast."/>
   </main>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2.2.0/dist/validate.min.js"></script>
+  <script>
+  validate.init();
+  </script>
   <footer>
     <nav class="main-footer">
      <ul>
